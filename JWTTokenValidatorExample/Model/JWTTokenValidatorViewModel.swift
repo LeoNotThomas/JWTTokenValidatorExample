@@ -11,14 +11,21 @@ class JWTTokenValidatorViewModel: ObservableObject {
     private let key: String
     @Published var error: Error?
     @Published var token: String?
+    @Published var payload: JWTPayload?
     
     init(key: String) {
         self.key = key
     }
     
-    func verify<T: JWTPayload>(token: String, digestAlgorithm: DigestAlgorithm, type: T.Type) async throws -> T? {
-        let validator = JWTTokenValidator(key: key)
-        return try await validator.verify(token, digestAlgorithm: digestAlgorithm, type: type)
+    func verify<T: JWTPayload>(token: String, digestAlgorithm: DigestAlgorithm, type: T.Type) {
+        Task {
+            do {
+                let validator = JWTTokenValidator(key: key)
+                payload = try await validator.verify(token, digestAlgorithm: digestAlgorithm, type: type)
+            } catch {
+                self.error = error
+            }
+        }
     }
     
     func createToken(payload: JWTPayload, digestAlgorithm: DigestAlgorithm) {

@@ -38,12 +38,23 @@ final class JWTTokenValidatorExampleTests: XCTestCase {
         
         wait(for: [expectation], timeout: 3)
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func test_GivenSUT_WhenTokenIsValid_ThenPayloadIsNotNil() throws {
+        let token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJlbXBlcnJhLmNvbSIsImV4cCI6NjQwOTIyMTEyMDB9.vZH2QAffkd_tNBbtShx6_eQBaCJ-ZEXFcYrzOlvRfLE"
+        
+        let expectation = expectation(description: "Expectation")
+        
+        sut.$payload
+            .dropFirst()
+            .sink { payload in
+                // THEN
+                XCTAssertNotNil(payload)
+                expectation.fulfill()
+            }
+            .store(in: &cancellables)
+        // WHEN
+        sut.verify(token: token, digestAlgorithm: .sha256, type: PayloadModel.self)
+        
+        wait(for: [expectation], timeout: 3)
     }
-
 }
