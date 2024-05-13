@@ -14,13 +14,25 @@
 		217A64CF2BEE443A00F31385 /* JWTTokenValidatorExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217A64CE2BEE443A00F31385 /* JWTTokenValidatorExampleTests.swift */; };
 		217A64D92BEE443A00F31385 /* JWTTokenValidatorExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217A64D82BEE443A00F31385 /* JWTTokenValidatorExampleUITests.swift */; };
 		217A64DB2BEE443A00F31385 /* JWTTokenValidatorExampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217A64DA2BEE443A00F31385 /* JWTTokenValidatorExampleUITestsLaunchTests.swift */; };
-		217A64F22BEE464C00F31385 /* JWTTokenValidator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 217A64EE2BEE45CC00F31385 /* JWTTokenValidator.framework */; };
-		217A64F32BEE464C00F31385 /* JWTTokenValidator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 217A64EE2BEE45CC00F31385 /* JWTTokenValidator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		217A64F62BEE469B00F31385 /* JWTTokenValidatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217A64F52BEE469B00F31385 /* JWTTokenValidatorViewModel.swift */; };
 		217A64F92BF2896200F31385 /* PayloadModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217A64F82BF2896200F31385 /* PayloadModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		214929FF2BF2B81B0066FC76 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 214929FA2BF2B81B0066FC76 /* JWTTokenValidator.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 217A63E42BEE20E900F31385;
+			remoteInfo = JWTTokenValidator;
+		};
+		21492A012BF2B81B0066FC76 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 214929FA2BF2B81B0066FC76 /* JWTTokenValidator.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 217A63EC2BEE20E900F31385;
+			remoteInfo = JWTTokenValidatorTests;
+		};
 		217A64CB2BEE443A00F31385 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 217A64B22BEE443800F31385 /* Project object */;
@@ -35,20 +47,6 @@
 			remoteGlobalIDString = 217A64B92BEE443800F31385;
 			remoteInfo = JWTTokenValidatorExample;
 		};
-		217A64ED2BEE45CC00F31385 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 217A64E82BEE45CC00F31385 /* JWTTokenValidator.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 217A63E42BEE20E900F31385;
-			remoteInfo = JWTTokenValidator;
-		};
-		217A64EF2BEE45CC00F31385 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 217A64E82BEE45CC00F31385 /* JWTTokenValidator.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 217A63EC2BEE20E900F31385;
-			remoteInfo = JWTTokenValidatorTests;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -58,7 +56,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				217A64F32BEE464C00F31385 /* JWTTokenValidator.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -66,6 +63,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		214929FA2BF2B81B0066FC76 /* JWTTokenValidator.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = JWTTokenValidator.xcodeproj; path = ../JWTTokenValidator/JWTTokenValidator.xcodeproj; sourceTree = "<group>"; };
 		217A64BA2BEE443800F31385 /* JWTTokenValidatorExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JWTTokenValidatorExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		217A64BD2BEE443800F31385 /* JWTTokenValidatorExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWTTokenValidatorExampleApp.swift; sourceTree = "<group>"; };
 		217A64BF2BEE443800F31385 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -76,7 +74,6 @@
 		217A64D42BEE443A00F31385 /* JWTTokenValidatorExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JWTTokenValidatorExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		217A64D82BEE443A00F31385 /* JWTTokenValidatorExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWTTokenValidatorExampleUITests.swift; sourceTree = "<group>"; };
 		217A64DA2BEE443A00F31385 /* JWTTokenValidatorExampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWTTokenValidatorExampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		217A64E82BEE45CC00F31385 /* JWTTokenValidator.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = JWTTokenValidator.xcodeproj; path = ../JWTTokenValidator/JWTTokenValidator.xcodeproj; sourceTree = "<group>"; };
 		217A64F52BEE469B00F31385 /* JWTTokenValidatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWTTokenValidatorViewModel.swift; sourceTree = "<group>"; };
 		217A64F82BF2896200F31385 /* PayloadModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayloadModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,7 +83,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				217A64F22BEE464C00F31385 /* JWTTokenValidator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,10 +103,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		214929FB2BF2B81B0066FC76 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				21492A002BF2B81B0066FC76 /* JWTTokenValidator.framework */,
+				21492A022BF2B81B0066FC76 /* JWTTokenValidatorTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		217A64B12BEE443800F31385 = {
 			isa = PBXGroup;
 			children = (
-				217A64E82BEE45CC00F31385 /* JWTTokenValidator.xcodeproj */,
+				214929FA2BF2B81B0066FC76 /* JWTTokenValidator.xcodeproj */,
 				217A64BC2BEE443800F31385 /* JWTTokenValidatorExample */,
 				217A64CD2BEE443A00F31385 /* JWTTokenValidatorExampleTests */,
 				217A64D72BEE443A00F31385 /* JWTTokenValidatorExampleUITests */,
@@ -164,15 +169,6 @@
 				217A64DA2BEE443A00F31385 /* JWTTokenValidatorExampleUITestsLaunchTests.swift */,
 			);
 			path = JWTTokenValidatorExampleUITests;
-			sourceTree = "<group>";
-		};
-		217A64E92BEE45CC00F31385 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				217A64EE2BEE45CC00F31385 /* JWTTokenValidator.framework */,
-				217A64F02BEE45CC00F31385 /* JWTTokenValidatorTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		217A64F12BEE464C00F31385 /* Frameworks */ = {
@@ -284,8 +280,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 217A64E92BEE45CC00F31385 /* Products */;
-					ProjectRef = 217A64E82BEE45CC00F31385 /* JWTTokenValidator.xcodeproj */;
+					ProductGroup = 214929FB2BF2B81B0066FC76 /* Products */;
+					ProjectRef = 214929FA2BF2B81B0066FC76 /* JWTTokenValidator.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -298,18 +294,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		217A64EE2BEE45CC00F31385 /* JWTTokenValidator.framework */ = {
+		21492A002BF2B81B0066FC76 /* JWTTokenValidator.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = JWTTokenValidator.framework;
-			remoteRef = 217A64ED2BEE45CC00F31385 /* PBXContainerItemProxy */;
+			remoteRef = 214929FF2BF2B81B0066FC76 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		217A64F02BEE45CC00F31385 /* JWTTokenValidatorTests.xctest */ = {
+		21492A022BF2B81B0066FC76 /* JWTTokenValidatorTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = JWTTokenValidatorTests.xctest;
-			remoteRef = 217A64EF2BEE45CC00F31385 /* PBXContainerItemProxy */;
+			remoteRef = 21492A012BF2B81B0066FC76 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
