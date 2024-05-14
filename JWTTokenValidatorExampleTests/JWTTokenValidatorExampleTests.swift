@@ -49,6 +49,7 @@ final class JWTTokenValidatorExampleTests: XCTestCase {
             .sink { payload in
                 // THEN
                 XCTAssertNotNil(payload)
+                XCTAssertEqual((payload as? PayloadModel)?.url, "emperra.com")
                 expectation.fulfill()
             }
             .store(in: &cancellables)
